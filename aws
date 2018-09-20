@@ -1,0 +1,43 @@
+Basic character of Cloud:
+
+On-demand /self service
+elastic
+pay per use
+Virtualisation:
+Available software
+VMware fusion-trail version available in mac
+VMware workstation/vSphere
+KVM
+Oracle virtual box- free for Window
+XEN
+Software to try in virtual machine:hypervisor, oVirt Live
+OVH.ie service provider
+Digitalocean
+
+Kplabs
+Type of cloud service
+SAAS: Google Doc, Office 365
+PAAS: Google App Engine
+IAAS: AWS, Linode, Digital Ocean
+
+AWS provides all services
+
+If you just depend on aws for everything then it we be
+expensive
+
+Scalability:
+Harizontal Scalability: Adding or removing instances from pool like cluster farm.
+Vertical Scalability: adding or removing Resources for existing servers.
+
+Auto scalability:
+
+Use Case Scenario:
+Whenever CPU Load>70%, scale up to two more servers.
+Whenever CPU Load <30%, scale down by two servers.
+
+Centos linux in virtual
+
+When scalining up the server in virtual environment or in cloud environment we need to shut down the server before scaling. thats the reason harizontal scaling came into picture.
+
+
+
