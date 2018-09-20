@@ -1,0 +1,245 @@
+String Formatting
+def print_formatted(number):
+    # your code goes here
+    x=len(bin(number)[2:])
+
+    for i in range (1, number+1):
+        print(str(i).rjust(x), end =' ')
+        print(oct(i)[2:].rjust(x),end =' ')
+        print(hex(i)[2:].upper().rjust(x),end =' ')
+        print(bin(i)[2:].rjust(x))
+  
+  
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+ 
+ 
+Alphabet Rangoli 
+def print_rangoli(size):
+    # your code goes here
+    a=list("abcdefghijklmnopqrstuvwxyz")
+    for i in range(size-1,0,-1):
+        x='-'.join(a[i:size])
+        y=4*size-3
+        z=x[::-1]+x[1:]
+        print(z.center(y,'-'))
+    for i in range (size):
+        x='-'.join(a[i:size])
+        y=4*size-3
+        z=x[::-1]+x[1:]
+        print(z.center(y,'-'))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+ 
+Designer Door Mat
+def print_rangoli(n,m):
+    x=int((n-1)/2)
+    for i in range (x):
+        char=2*i*'.|.'+'.|.'
+        print(char.center(m,'-'))
+    print('WELCOME'.center(m,'-'))
+    for i in range (x-1,-1,-1):
+        char=2*i*'.|.'+'.|.'
+        print(char.center(m,'-'))
+  
+if __name__ == '__main__':
+    n = input()
+    a=n.split(' ')
+    b=int(a[0])
+    c=int(a[1])
+    print_rangoli(b,c)
+ 
+# same can be done by
+def print_rangoli(n,m):
+    x=n//2
+ z=[(2*i*'.|.'+'.|.').center(m,'-') for i in range(x)]+['WELCOME'.center(m,'-')]+[(2*i*'.|.'+'.|.').center(m,'-') for i in range(x-1,-1,-1)]
+    d='\n'.join(z)
+    print(d)
+ 
+capitalize:
+
+import math
+import os
+import random
+import re
+import sys
+
+def solve(s):
+    x= s.split(' ')
+    for n,i in enumerate(x):
+        x[n]=i.title()
+    y=' '.join(x)
+    return y
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+ 
+ 
+def merge_the_tools(string, k):
+    # your code goes here
+    x = len(string)/k
+    a=[]
+    for i in range(x):
+        a.append(string[i*k:i*3+3])
+        
+    
+    for i in a:
+        b = sorted(set(list(i)), key=i.index)
+        c = list(b)
+        d = ''.join(c)
+        print(d)
+  
+if __name__ == '__main__':
+    string, k = raw_input(), int(raw_input())
+    merge_the_tools(string, k)
+ 
+ 
+ S, N = input(), int(input()) 
+for part in zip(*[iter(S)] * N):
+    d = dict()
+    print(''.join([ d.setdefault(c, c) for c in part if c not in d ]))
+ 
+ Hi nagacharan. I will try to explain it:
+
+❶iter(s) returns an iterator for S.
+
+❷[iter(s)]*n makes a list of n times the same iterator for s.
+
+Example: [[iter(s)]*3] = ([iter(s), iter(s), iter(s)])
+
+ADVICE: It's not three copies of the same iterator, it's three times the same iterator object. Really:
+
+for part in zip(*[iter(S)] * N):
+
+
+It is equivalent to:
+it = iter(s)
+for part in zip(it, it, it):
+
+❹*[] unpack a list:
+Example: print(*[1,2,3,4]) = print(1,2,3,4)
+❺zip make an iterator that aggregates elements from each of the iterables.
+Example:
+>>>x = [1, 2, 3]
+>>> y = [4, 5, 6]
+>>> zipped = zip(x, y)
+>>> list(zipped)
+[(1, 4), (2, 5), (3, 6)]
+
+we have:
+zip(*[iter(s)]*3)
+
+It is equivalent to:
+itr = iter(s)
+zip(itr, itr, itr)
+
+it extracts an item from all the three iterators from the list in order. Since all the iterators are the same object, it just groups the list in chunks of 3.
+Example:
+for part in zip(*[iter('abcdefghi')]*3):
+ print(part)
+
+a,b,c,d,e,f,g,h,i  a,b,c,d,e,f,g,h,i  a,b,c,d,e,f,g,h,i
+^                    ^                    ^             
+      ^                    ^                    ^
+            ^                    ^                    ^
+
+Output:
+(a,b,c)
+(d,e,f)
+(g,h,i)
+
+Set .add() 
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+x=int(raw_input())
+country=set()
+for i in range (x):
+    y=raw_input()
+    country.add(y)
+print(len(country))
+
+Symmetric DIfference
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+m=int(raw_input())
+list1=set(raw_input().split())
+n=int(raw_input())
+list2=set(raw_input().split())
+list3=list1.symmetric_difference(list2)
+list4=list(map(int ,list3))
+list5=sorted(list4)
+for i in list5:
+    print(i)
+ 
+ 
+ 
+x= int(input())
+l1 = set(map(int,input().split()))
+y = int(input())
+for i in range(y):
+    strng = input().split()
+    func = strng[0]
+    lng = strng[1]
+    l2 = set(map(int,input().split()))
+    if func == 'intersection_update':
+        l1.intersection_update(l2)
+    elif func == 'difference_update':
+        l1.difference_update(l2)
+    elif func == 'symmetric_difference_update':
+        l1.symmetric_difference_update(l2)
+    elif func == 'update':
+        l1.update(l2)
+    else:
+        print("err")
+sum=0
+for i in l1:
+    sum += i
+print(sum)
+
+set doesn't support indexing
+
+The Captain's Room
+x = int(input())
+y = list(map(int,input().split()))
+z = set(y)
+a= ((sum(z)*x)-(sum(y)))//(x-1)
+print(a)
+
+subset
+x = int(input())
+for i in range (x):
+    al =  int(input())
+    A = set(map(int,input().split()))
+    bl = int(input())
+    B = set(map(int,input().split()))
+    if A.issubset(B):
+        print("True")
+    else:
+        print("False")
+  
+  
+Superset:
+A = set(map(int,input().split()))
+x= int(input())
+y=[]
+for i in range(x):
+    y.append(set(map(int,input().split())))
+z=0
+for i in y:
+    if A.issuperset(i):
+        z+=1
+    else:
+        print("False")
+        break
+if z==x:
+    print("True")
+        
