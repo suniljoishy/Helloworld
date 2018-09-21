@@ -1,0 +1,34 @@
+
+
+On-Demand Resources:
+
+
+
+A person can provision resources in cloud whenever needed
+without requiring any human interaction with a service provider.
+
+
+
+On-demand makes self service with automation possible in a seeming
+less way.
+
+
+
+Can write the Jenkin job to create a server instance instead
+of waiting for architect to create the instance.
+
+
+
+Even the cloud provider will have the limitation of
+instance. When all the instances available in the particular availability zone
+cloud provider also through error to launch an instance.
+
+
+
+Ex: in case u shut down the server for some time and restart
+it back after some time but in between all the instance of server is occupied and
+service provider doesn’t have reserved resources then you might get error to
+launch the server back.
+
+
+
