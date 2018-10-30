@@ -1,0 +1,22 @@
+gride vs cluster 
+
+Cluster: 
+clusters are SMP or MPP architecture on which datastage server will be installed and all datastage job will execute in the server, A static configuration APT will be be written by admin 
+based on which datastage jobs will execute on the compute node. if the configuration file is for 4 node then jobs will execute in 4 nodes.
+A Grid uses software to auto-gen the APT file to use a subset of resources based on compute node use. 
+If you have a group of 25 compute nodes, the designer would write his APT file to use 4 compute nodes. If those nodes are busy, Datastage would still try and use those nodes. Under the GRID software, it will look at the utilisation of the compute nodes on the grid and pick which machines are underused and dispatch the job to these nodes. 
+In addition you can have different software running on the same grid compute nodes...such as SAS, DStage, etc. So a SAS batch job could be dispatched to 2 of the compute nodes which would remove them for contention for a Datastage job.. 
+
+https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_9.1.0/com.ibm.swg.im.iis.ds.parjob.adref.doc/topics/r_deeadvrf_Overriding_Default_Buffering_Behavior.html
+http://www.dsxchange.com/viewtopic.php?t=88947
+http://www-01.ibm.com/support/docview.wss?uid=swg21651831
+
+
+Local container Vs Share Container
+Shared containers are common portion of the code shared with multiple data-stage jobs. where as local containers are just constructed representation of portion of job to make job look simple.
+Shared containers are stored in the repository where as local containers are just part of job.
+Local containers can be compiled and it will compile both container and job as both are same just visually its different. and link mapping to input and output is not required for local container.
+Shared Container cant be compiled, any modification in shared container just need to save it and compilation is done in job level. and link mapping for input and out put is mandatory.
+Both share container can be converted to local container and vise versa. 
+when share container is converted as local copy of share container is copied to job as local container. 
+when local container is converted as shared container prompt is provided to save the container in repository.
