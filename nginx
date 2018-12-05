@@ -1,0 +1,79 @@
+Nginx
+=======
+___________ was introduced in the year 1995.-------------------------------------Apache HTTP
+___________ webserver was introduced primarily to support Java servlets.--------Apache Tomcat
+Nginx was introduced in the year _________.--------------------------------------1999
+IBM Websphere was introduced in the year __________.----------------------------1998
+Nginx has become popular as it resolves __________.-----------------------------C10K problem
+Nginx supports __________ through SCGI protocol.--------------------------------Reverse Proxying
+How many default servers can you configure--------------------------------------Any number of--c
+Which of the following line can be used to install Nginx?-----------------------apt-get install ngin
+Nginx can be started using _____________.----------------------------------------service nginx start
+For smooth shutdown of Nginx, you must use _____________.------------------------nginx -s quit
+In nginx.conf, a block of lines defined within a pair of curly braces is called ----------Context
+worker_connections is a directive contained within ___________.---------------------------events
+Each resource has its own _____________.----------------------------------------------URL---CROSS CEHCK WITH GOOGLE
+Nginx supports __________ through round robin algorithm.-------------------Load balancing
+It is always recommended to install ___________ version of Nginx-------------------------development
+For smooth shutdown of Nginx, you must use _____________.--------------------nginx -s quit
+In nginx.conf, a block of lines defined within a pair of curly braces is called _____________.----------Context
+The event-polling nature of Nginx can be dealt with using _____________.-------------------events-
+worker_connections is a directive contained within ___________.---------------------------events
+
+Apache cannot handle 10K connections because it is a _____________ webserver.----traditional,event driven--incorrect, thread based is correct
+World's first web server was developed in_____________.-----1980's - incorrect...1990
+
+
+Choose the best option. Nginx is a ___________. A) Webserver B) Reverse proxy C) Loadbalancer D) Hub----All the options--incorrect...ABC
+
+
+
+
+You can ask Nginx to refresh its configuration file using _____________.
+
+nginx -s reload--co
+
+
+
+
+
+
+
+A server block may contain _________ location block.
+
+two--co
+
+any number of
+
+Only one
+
+If you define more than one default server, Nginx will _________.
+
+fail to load
+
+work as multiple subdomain server
+
+work as usual
+
+work as multiple domain server--c
+
+A server block may contain another server block.-------------FALSE
+
+When you configure Nginx as a reverse proxy for Apache, both may listen to a same port.
+
+False
+
+True--co
+
+
+
+
+127.0.0.1 is an IP address of _____________.
+
+Apache
+
+
+
+
+
+
