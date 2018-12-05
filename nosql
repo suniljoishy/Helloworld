@@ -1,0 +1,33 @@
+Key-value pair data storages include all except ________.  --network attached storage
+A Riak convergent replicated data type (CRDT) includes ----Maps/Sets/Counters
+A Key-value store does not support Secondary Indexes  ---False
+The RDBMS 'table' equivalent terminology in Riak is ----bucket
+Cassandra has properties of both and __ .-------------Google Bigtable / Amazon Dynamo
+In Cassandra, the ___________ determines how many copies of the data will be maintained across multiple nodes.-----True
+In column-oriented stores, data is stored on a basis.------------Column Family
+Pre-join projection is equivalent to as in traditional relational systems.-----Materialized view
+Hbase main server components include all except _.---------Hbase Memstore
+MongoDB read/write performance can be tuned with the help of Stored Procedures----False
+An RDBMS equivalent component for a "document identifier" in a Document database:---Foreign Key
+In MongoDB, there is a similar feature of 'like' expression as like RDBMS.------False
+______ is a syntax for retrieving specific elements from an XML document.---Xpath
+An RDBMS equivalent component for a "collection" in a Document database:----Table
+The major components of a Graph include all except _.----JSON
+Only Nodes have properties in Graph database.---False
+Cypher query language is associated with __-----Neo4j
+Wiredtiger storage engine is a part of ___.----MongoDB
+Like most relational databases, Kudu also offers secondary indexes and uniqueness constraints.----False
+Columnar databases are preferable for OLTP systems.---False
+Full-form of 'CRUD' is _.----Create-Read-Update-Delete
+In a column-database a row is being uniquely identified by __.----Row-key
+A column-database used to store __ versions of each cells.---- Multiple
+The row store needs to perform _ IO to insert a new value.------Single
+Hbase main server components include all except _.-----Hbase Memstore
+HBase Tables are divided _ by row key range into .Horizontally,  region
+The MATCH clause is roughly equivalent to the clause in SQL and the RETURN clause to a _ clause.----------Where, Select
+______ is a syntax for retrieving specific elements from an XML document.-----Xpath
+MongoDB read/write performance can be tuned with the help of Stored Procedures----False
+The equivalent Hbase structure of an in-memory tree in Log-structured Merge Trees is __.----MemStore
+Kudu can be accessed via all except _.----Apache Hive
+Cassandra lightweight transactions (LWT) supports pattern.------Check-and-set
+
